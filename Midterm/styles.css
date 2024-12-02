@@ -1,0 +1,138 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: #ff7043;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    animation: slideIn 2s ease-out; /* Animation for header */
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+nav ul li a:hover {
+    animation: hoverPulse 0.5s infinite alternate; /* Button hover animation */
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Recipes Grid */
+.recipes-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+article {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(50% - 1rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+/* Responsive Images */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Keyframes Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hoverPulse {
+    from {
+        transform: scale(1);
+        background-color: #ff7043;
+    }
+    to {
+        transform: scale(1.1);
+        background-color: #ff8563;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .recipes-grid {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
